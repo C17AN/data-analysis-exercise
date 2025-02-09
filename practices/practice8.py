@@ -14,6 +14,7 @@ data = {
 df = pd.DataFrame(data)
 
 # df.loc은 단일 행을 찾는 용도가 아니라, 조건과 일치하는 모든 행을 찾는다.
+# loc["행", "열"]
 mean_age = df.loc[df["나이"].between(0, 100), "나이"].mean()
 
 df[df["나이"].between(0, 100)]  # 3.1
