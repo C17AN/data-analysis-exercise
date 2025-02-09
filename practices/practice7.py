@@ -12,6 +12,7 @@ data = {
 
 df = pd.DataFrame(data)
 
+# groupby를
 
 df["구매금액"].sum()  # 2.1
 total_purchase = df.groupby("고객명")["구매금액"].sum()
