@@ -15,12 +15,9 @@ df = pd.DataFrame(
 
 # 5.1
 pivot_df = df.pivot_table(columns="이름", index="과목", values="점수")
-pivot_df
 
-df
+# 5.2
+df.groupby("과목")["점수"].mean()
 
-# # 5.2
-# df.groupby("과목")["점수"].mean()
-
-# # 5.3
-# df.loc[(df["점수"] >= 90) & (df["과목"] == "영어")]
+# 5.3
+df.loc[(df["점수"] >= 90) & (df["과목"] == "영어")]
